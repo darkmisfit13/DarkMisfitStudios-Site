@@ -10,19 +10,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #14100f;
-    --panel: #1c1613;
-    --line: #34281f;
-    --ink: #ede6de;
-    --ink-muted: #a99b8e;
-    --accent: #8c2f39;
-    --accent-bright: #b5424f;
+    --bg: #0b0a14;
+    --panel: #14121f;
+    --line: #211d34;
+    --ink: #e8e6f2;
+    --ink-muted: #9490ac;
+    --accent: #6c63ff;
+    --accent-bright: #8b7fff;
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0;
     padding: 0;
-    background: var(--bg);
+    background:
+      linear-gradient(rgba(108,99,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(108,99,255,0.06) 1px, transparent 1px),
+      var(--bg);
+    background-size: 48px 48px, 48px 48px, auto;
     color: var(--ink);
     font-family: 'Work Sans', sans-serif;
     min-height: 100%;
