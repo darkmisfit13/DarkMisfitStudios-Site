@@ -1,149 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DarkMisfitStudios — Rebuilding</title>
-<meta name="description" content="DarkMisfitStudios turns raw emotion into visual art. The studio site is being rebuilt.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0b0a14;
-    --panel: #14121f;
-    --line: #211d34;
-    --ink: #e8e6f2;
-    --ink-muted: #9490ac;
-    --accent: #6c63ff;
-    --accent-bright: #8b7fff;
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    background:
-      linear-gradient(rgba(108,99,255,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(108,99,255,0.06) 1px, transparent 1px),
-      var(--bg);
-    background-size: 48px 48px, 48px 48px, auto;
-    color: var(--ink);
-    font-family: 'Work Sans', sans-serif;
-    min-height: 100%;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8vh 6vw;
-  }
-  .content {
-    max-width: 640px;
-    width: 100%;
-  }
-  .mark {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.04em;
-    color: var(--ink-muted);
-    margin-bottom: 2.5rem;
-  }
-  h1 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: clamp(2.2rem, 6vw, 3.6rem);
-    line-height: 1.08;
-    margin: 0 0 1.4rem;
-    letter-spacing: -0.01em;
-  }
-  h1 em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--accent-bright);
-  }
-  p.lede {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--ink-muted);
-    max-width: 46ch;
-    margin: 0 0 2.8rem;
-  }
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.9rem;
-    margin-bottom: 3.2rem;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.85rem 1.5rem;
-    border-radius: 2px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: background 0.15s ease, border-color 0.15s ease;
-  }
-  .btn-primary {
-    background: var(--accent);
-    color: var(--ink);
-  }
-  .btn-primary:hover { background: var(--accent-bright); }
-  .btn-secondary {
-    border: 1px solid var(--line);
-    color: var(--ink);
-  }
-  .btn-secondary:hover { border-color: var(--ink-muted); }
-  .status {
-    border-top: 1px solid var(--line);
-    padding-top: 1.4rem;
-    font-size: 0.88rem;
-    color: var(--ink-muted);
-    line-height: 1.6;
-  }
-  footer {
-    padding: 2rem 6vw;
-    font-size: 0.8rem;
-    color: var(--ink-muted);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    border-top: 1px solid var(--line);
-  }
-  footer a { color: var(--ink-muted); }
-  footer a:hover { color: var(--ink); }
-  @media (prefers-reduced-motion: no-preference) {
-    .content { animation: rise 0.6s ease-out; }
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DarkMisfitStudios turns raw emotion into AI-assisted visual art, music videos, image restoration, music, and poetry.">
+  <meta name="theme-color" content="#0b0a14">
+  <title>DarkMisfitStudios | AI Art, Music Videos & Restoration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0a14;
+      --panel: #14121f;
+      --line: #29243d;
+      --ink: #e8e6f2;
+      --muted: #b2aec7;
+      --accent: #6c63ff;
+      --accent-bright: #a49aff;
+      --content: 1160px;
     }
-  }
-</style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(rgba(108,99,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(108,99,255,.045) 1px, transparent 1px),
+        var(--bg);
+      background-size: 48px 48px, 48px 48px, auto;
+      color: var(--ink);
+      font-family: 'Work Sans', sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent-bright); outline-offset: 4px; }
+    .wrap { width: min(var(--content), calc(100% - 40px)); margin-inline: auto; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 0; border-bottom:1px solid var(--line); }
+    .wordmark { color:var(--muted); text-decoration:none; font-size:.8rem; letter-spacing:.12em; }
+    nav { display:flex; flex-wrap:wrap; gap:1.25rem; font-size:.9rem; }
+    nav a { text-decoration:none; color:var(--muted); }
+    nav a:hover { color:var(--ink); }
+    .brand-banner { display:block; width:100%; height:clamp(180px, 26vw, 310px); margin:2rem 0 3rem; object-fit:cover; object-position:center 52%; border:1px solid var(--line); background:#07060c; }
+    .hero { max-width:820px; padding:1rem 0 5rem; }
+    .eyebrow { margin:0 0 .7rem; color:var(--accent-bright); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; }
+    h1,h2,h3 { font-family:'Fraunces', serif; font-weight:500; line-height:1.12; }
+    h1 { max-width:780px; margin:0 0 1rem; font-size:clamp(2.8rem, 7vw, 5.6rem); letter-spacing:-.035em; }
+    h1 em { color:var(--accent-bright); font-weight:300; }
+    .lede { max-width:68ch; margin:0; color:var(--muted); font-size:clamp(1.05rem, 2vw, 1.25rem); }
+    .actions { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.8rem; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:.75rem 1.2rem; border:1px solid var(--line); border-radius:3px; text-decoration:none; font-weight:600; }
+    .button.primary { border-color:var(--accent); background:var(--accent); }
+    .button:hover { border-color:var(--accent-bright); background:var(--accent-bright); color:#100e1b; }
+    section { padding:4rem 0; border-top:1px solid var(--line); }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:1.5rem; margin-bottom:1.6rem; }
+    .section-head h2 { margin:0; font-size:clamp(2rem,4vw,3.1rem); }
+    .section-head p { max-width:52ch; margin:0; color:var(--muted); }
+    .work-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:1rem; }
+    .work-card { overflow:hidden; grid-column:span 4; border:1px solid var(--line); background:var(--panel); }
+    .work-card.wide { grid-column:span 8; }
+    .work-card img { display:block; width:100%; height:280px; object-fit:cover; }
+    .work-card .card-body { padding:1rem 1.1rem 1.2rem; }
+    .work-card h3 { margin:0 0 .35rem; font-size:1.4rem; }
+    .work-card p { margin:0; color:var(--muted); font-size:.92rem; }
+    .video-list { display:grid; grid-template-columns:repeat(2,1fr); gap:.8rem; margin-top:1rem; }
+    .video-link { display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:74px; padding:1rem 1.1rem; border:1px solid var(--line); background:rgba(20,18,31,.82); text-decoration:none; }
+    .video-link:hover { border-color:var(--accent); }
+    .video-link small { display:block; color:var(--muted); }
+    .video-link .arrow { color:var(--accent-bright); font-size:1.2rem; }
+    .services { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+    .service { padding:1.3rem; border:1px solid var(--line); background:var(--panel); }
+    .service h3 { margin:.2rem 0 .55rem; font-size:1.45rem; }
+    .service p { margin:0; color:var(--muted); font-size:.93rem; }
+    .about { display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; align-items:center; }
+    .about h2 { margin:0 0 1rem; font-size:clamp(2rem,4vw,3.2rem); }
+    .about p { max-width:65ch; color:var(--muted); }
+    .about-portrait { display:block; width:100%; max-height:680px; aspect-ratio:3 / 4; object-fit:cover; object-position:center 22%; border:1px solid var(--line); }
+    .profile-link { color:var(--accent-bright); text-underline-offset:4px; }
+    .profile-link:hover { color:var(--ink); }
+    .contact { display:flex; align-items:center; justify-content:space-between; gap:2rem; padding:2rem; border:1px solid var(--line); background:var(--panel); }
+    .contact h2 { margin:0 0 .5rem; font-size:clamp(1.8rem,3.5vw,2.8rem); }
+    .contact p { margin:0; color:var(--muted); }
+    footer { margin-top:4rem; padding:1.5rem 0; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+    .footer-inner { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+    @media (max-width:760px) {
+      .topbar { align-items:flex-start; flex-direction:column; }
+      nav { gap:.7rem 1rem; }
+      .brand-banner { margin:1.25rem 0 2rem; height:190px; }
+      .hero { padding:1rem 0 3rem; }
+      .section-head,.contact { align-items:flex-start; flex-direction:column; }
+      .work-card,.work-card.wide { grid-column:span 6; }
+      .services { grid-template-columns:repeat(2,1fr); }
+      .about { grid-template-columns:1fr; }
+    }
+    @media (max-width:520px) {
+      .wrap { width:min(var(--content), calc(100% - 28px)); }
+      .work-card,.work-card.wide { grid-column:1 / -1; }
+      .work-card img { height:250px; }
+      .video-list,.services { grid-template-columns:1fr; }
+      .brand-banner { height:150px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+  </style>
 </head>
 <body>
-<main>
-  <div class="content">
-    <div class="mark">DARKMISFITSTUDIOS</div>
-    <h1>The studio is being<br><em>rebuilt.</em></h1>
-    <p class="lede">DarkMisfitStudios turns raw emotion — heartbreak, loss, rage, rebirth — into visual art. The full site is under construction. In the meantime, reach out directly or explore the app.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="mailto:hello@darkmisfitstudios.com">Start a project</a>
-      <a class="btn btn-secondary" href="https://hub.darkmisfitstudios.com">Explore the app</a>
+  <header class="wrap">
+    <div class="topbar">
+      <a class="wordmark" href="#home">DARKMISFITSTUDIOS</a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://hub.darkmisfitstudios.com">Try OmniAI Hub</a>
+      </nav>
     </div>
-    <div class="status">Taking early project inquiries as we rebuild; portfolio, services, and archive will be live soon.</div>
-  </div>
-</main>
-<footer>
-  <span>© 2026 DarkMisfitStudios</span>
-  <a href="/privacy">Privacy Policy</a>
-</footer>
+    <img class="brand-banner" src="draft-assets/darkmisfit-brand-banner.jpg" alt="DarkMisfitStudios violet wolf emblem and brand banner">
+  </header>
+
+  <main id="home">
+    <div class="wrap">
+      <section class="hero" style="border-top:0;padding-top:0">
+        <p class="eyebrow">AI research · visual art · music · story</p>
+        <h1>Make the feeling <em>visible.</em></h1>
+        <p class="lede">DarkMisfitStudios is an AI research and creative studio turning heartbreak, loss, betrayal, and rebirth into imagery, music videos, original AI-assisted music, restored photographs, and poetry.</p>
+        <div class="actions">
+          <a class="button primary" href="#work">Explore selected work</a>
+          <a class="button" href="mailto:hello@darkmisfitstudios.com">Start a project</a>
+        </div>
+      </section>
+
+      <section id="work">
+        <div class="section-head">
+          <div><p class="eyebrow">Selected work</p><h2>Images, sound, and feeling.</h2></div>
+          <p>A selection of image restoration and AI-assisted visual work, alongside music and video projects.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card wide">
+            <img src="draft-assets/family-photo-restoration.jpg" alt="Before-and-after colorized restoration of a family photograph">
+            <div class="card-body"><h3>Family photo restoration</h3><p>A family photograph carefully brought back to life through restoration and colorization.</p></div>
+          </article>
+          <article class="work-card">
+            <img src="draft-assets/dark-fae-portrait.png" alt="Dark fantasy portrait of a fae with violet wings in a moonlit forest">
+            <div class="card-body"><h3>Dark Fae</h3><p>AI-assisted fantasy portrait exploring a darker, dreamlike world.</p></div>
+          </article>
+          <article class="work-card">
+            <img src="draft-assets/dark-fae-lake.jpeg" alt="A violet-winged fae seated on a dark flower above reflective water">
+            <div class="card-body"><h3>Dark Fae: reflection</h3><p>A companion image built around reflection, shadow, and violet light.</p></div>
+          </article>
+          <article class="work-card">
+            <img src="draft-assets/this-is-heaven.png" alt="Black-and-white futuristic city artwork with a bright sign reading This Is Heaven">
+            <div class="card-body"><h3>This Is Heaven</h3><p>Monochrome city artwork with a stark, surreal message.</p></div>
+          </article>
+        </div>
+        <div class="video-list" aria-label="Music and video projects">
+          <a class="video-link" href="https://www.instagram.com/reel/Ddzn8tMx86S/" target="_blank" rel="noopener noreferrer"><span><strong>Original AI-assisted song</strong><small>Music created by DarkMisfitStudios · Watch on Instagram</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="video-link" href="https://www.instagram.com/reel/DdcVGV-yGWw/" target="_blank" rel="noopener noreferrer"><span><strong>Cage</strong><small>Midnight Society · Visuals and edit by DarkMisfitStudios</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="video-link" href="https://www.instagram.com/reel/DdtIeNORl88/" target="_blank" rel="noopener noreferrer"><span><strong>Dreams Don’t Die</strong><small>Midnight Society · Visuals and edit by DarkMisfitStudios</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="video-link" href="https://www.instagram.com/reel/DdHU9cCOo4y/" target="_blank" rel="noopener noreferrer"><span><strong>Viper</strong><small>Blood Helix · Visuals and edit by DarkMisfitStudios</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="video-link" href="https://www.instagram.com/reel/DdCb35KSocw/" target="_blank" rel="noopener noreferrer"><span><strong>I Wanna Be Your Slave</strong><small>Måneskin · Visuals and edit by DarkMisfitStudios</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <p class="eyebrow" style="margin-top:1rem">Music credits identify the original artists and songs; the visual treatments and edits shown here are by DarkMisfitStudios.</p>
+      </section>
+
+      <section id="services">
+        <div class="section-head"><div><p class="eyebrow">What I create</p><h2>Creative work with a darker pulse.</h2></div></div>
+        <div class="services">
+          <article class="service"><h3>AI music videos</h3><p>AI-assisted visual concepts and edited videos shaped around a song’s mood and story.</p></article>
+          <article class="service"><h3>Image creation</h3><p>Original AI-assisted imagery for dark, emotional, and imaginative ideas.</p></article>
+          <article class="service"><h3>Photo restoration</h3><p>Enhancement, colorization, and restoration that help family photographs feel present again.</p></article>
+          <article class="service"><h3>Music & poetry</h3><p>Original AI-assisted music and poetry exploring raw emotion and personal stories.</p></article>
+        </div>
+      </section>
+
+      <section id="omni">
+        <div class="contact">
+          <div>
+            <p class="eyebrow">A separate creative workspace</p>
+            <h2>Meet OmniAI Hub</h2>
+            <p>OmniAI Hub is live in starter mode and accepting users, with a free plan that includes monthly credits. Its broader vision brings AI image, video, and music creation; website and app building; media editing; website analysis; and prompt engineering into one place. Available tools and credit details can change as the hub grows, so visit OmniAI Hub for the current offer.</p>
+          </div>
+          <a class="button primary" href="https://hub.darkmisfitstudios.com">Try OmniAI Hub</a>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div><p class="eyebrow">About Benjamin James</p><h2>Founder, creator, and maker of OmniAI Hub.</h2><p>I’m Benjamin James, founder and content creator at DarkMisfitStudios and creator of OmniAI Hub. I studied computer skills and web page design at Mountain Empire Community College.</p><p>My work brings AI tools, prompt engineering, and hands-on editing together to make visual art, music videos, image restorations, AI-assisted music, and poetry. I’m drawn to the raw emotions—heartbreak, loss, betrayal, and rebirth—that give creative work its pulse.</p><p><a class="profile-link" href="https://benjamin-james.link" target="_blank" rel="noopener noreferrer">Find me online ↗</a></p></div>
+        <img class="about-portrait" src="draft-assets/benjamin-james.png" alt="Portrait of Benjamin James in a dark, violet-lit setting">
+      </section>
+
+      <section id="contact">
+        <div class="contact">
+          <div><p class="eyebrow">Have a project in mind?</p><h2>Let’s make something that stays with you.</h2><p>Tell me what you’re imagining, what feeling you want to capture, and how to reach you.</p></div>
+          <a class="button primary" href="mailto:hello@darkmisfitstudios.com?subject=DarkMisfitStudios%20project%20inquiry">Start a project</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>© 2026 DarkMisfitStudios</span><a href="/privacy">Privacy Policy</a></div>
+  </footer>
 </body>
 </html>
