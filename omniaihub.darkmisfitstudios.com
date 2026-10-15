@@ -113,7 +113,7 @@
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="https://omniaihub.darkmisfitstudios.com">Try OmniAI Hub</a>
+        <a href="https://omniai.darkmisfitstudios.com">Try OmniAI</a>
       </nav>
     </div>
     <img class="brand-banner" src="draft-assets/darkmisfit-brand-banner.jpg" alt="DarkMisfitStudios violet wolf emblem and brand banner">
