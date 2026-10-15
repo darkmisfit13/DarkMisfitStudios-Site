@@ -178,10 +178,10 @@
         <div class="contact">
           <div>
             <p class="eyebrow">A separate creative workspace</p>
-            <h2>Meet OmniAI Hub</h2>
+            <h2>Meet OmniAI</h2>
             <p>OmniAI Hub is live in starter mode and accepting users, with a free plan that includes monthly credits. Its broader vision brings AI image, video, and music creation; website and app building; media editing; website analysis; and prompt engineering into one place. Available tools and credit details can change as the hub grows, so visit OmniAI Hub for the current offer.</p>
           </div>
-          <a class="button primary" href="https://omniaihub.darkmisfitstudios.com">Try OmniAI Hub</a>
+          <a class="button primary" href="https://omniai.darkmisfitstudios.com">Try OmniAI</a>
         </div>
       </section>
 
