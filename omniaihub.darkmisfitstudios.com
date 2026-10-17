@@ -113,7 +113,7 @@
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="https://omniai.darkmisfitstudios.com">Try OmniAI</a>
+        <a href="https://omniai.darkmisfitstudios.com/homepage">Try OmniAI</a>
       </nav>
     </div>
     <img class="brand-banner" src="draft-assets/darkmisfit-brand-banner.jpg" alt="DarkMisfitStudios violet wolf emblem and brand banner">
@@ -181,7 +181,7 @@
             <h2>Meet OmniAI</h2>
             <p>OmniAI Hub is live in starter mode and accepting users, with a free plan that includes monthly credits. Its broader vision brings AI image, video, and music creation; website and app building; media editing; website analysis; and prompt engineering into one place. Available tools and credit details can change as the hub grows, so visit OmniAI Hub for the current offer.</p>
           </div>
-          <a class="button primary" href="https://omniai.darkmisfitstudios.com">Try OmniAI</a>
+          <a class="button primary" href="https://omniai.darkmisfitstudios.com/homepage">Try OmniAI</a>
         </div>
       </section>
 
