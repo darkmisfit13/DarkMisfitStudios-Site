@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="facebook-domain-verification" content="3h2uhn4kr9git2ok115aofz6wehtba" />
-  <meta charset="utf-8">
+ <meta name="facebook-domain-verification" content="3h2uhn4kr9git2ok115aofz6wehtba" />  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="DarkMisfitStudios turns raw emotion into AI-assisted visual art, music videos, image restoration, music, and poetry.">
   <meta name="theme-color" content="#0b0a14">
